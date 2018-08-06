@@ -22,7 +22,9 @@ public class DisplayMessageActivity extends AppCompatActivity {
             String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
             String[] results = myDB.getInfo(message);
             showMessage(results[1]);
-            showImage(results[0]);
+            if( results [0] != "") {
+                showImage(results[0]);
+            }
         }catch(Exception e){
             showMessage(e.toString());
         }

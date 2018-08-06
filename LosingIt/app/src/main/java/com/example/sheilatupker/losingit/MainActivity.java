@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         myDB = new DatabaseHelper(this);
         myDB.clearAllLData();
-        boolean isInserted = myDB.insertData(1, "sticksofbutter", "poundsticksofbutter");
+        boolean isInserted = myDB.insertData(1, "four sticks of butter", "poundsticksofbutter");
         myDB.insertData(2, "hamster", "poundhamster");
         myDB.insertData(10, "panda", "panda");
 

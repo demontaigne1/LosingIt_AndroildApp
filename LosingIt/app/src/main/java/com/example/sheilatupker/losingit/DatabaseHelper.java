@@ -54,21 +54,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
     }
 
-   /* public String getAllData(){
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("SELECT * FROM weights", null);
-        if(res.getCount() == 0){
-            return "Nothing Found";
-        }
-        StringBuffer buffer = new StringBuffer();
-        while (res.moveToNext()) {
-            buffer.append(res.getString(3) + "\n");
-        }
-        return buffer.toString();
 
-
-    }
-    */
 
    public String [] getInfo(String wentered){
        try {
