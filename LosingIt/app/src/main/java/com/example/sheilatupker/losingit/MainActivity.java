@@ -14,28 +14,23 @@ public class MainActivity extends AppCompatActivity {
     DatabaseHelper myDB;
 
 
-    @Override
+    @Override //this satisfies the superclass
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         myDB = new DatabaseHelper(this);
         myDB.clearAllLData();
+        //The information below is being inserted into the database
         boolean isInserted = myDB.insertData(1, "four sticks of butter", "poundsticksofbutter");
-        myDB.insertData(2, "hamster", "poundhamster");
-        myDB.insertData(10, "panda", "panda");
-
-        if(isInserted == true){
-            Toast.makeText(MainActivity.this, "Data Inserted", Toast.LENGTH_LONG).show();
-        }
-        else
-            Toast.makeText(MainActivity.this, "data not Inserted", Toast.LENGTH_LONG).show();
+        myDB.insertData(2, "baby hamster", "poundhamster");
+        myDB.insertData(10, "baby panda", "panda");
 
 
     }
 
-    /**
-     * Called When the user taps the Go! button
-     */
+
+     //Called When the user taps the Go! button
+
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText editText = (EditText) findViewById(R.id.wlost);
